@@ -63,15 +63,28 @@ export default function Home() {
             </section>
 
             {/* 3D model section */}
-            <section className="mx-auto max-w-7xl mt-10 mb-11">
-              <Spline scene="https://prod.spline.design/6Wq1Q7YGyM-iab9i/scene.splinecode" />
+            <section className="mx-auto max-w-7xl mt-8 mb-8 lg:mt-0 lg:mb-0 h-[300px] md:h-[400px] lg:h-[650px] w-full">
+              <div className="w-full h-full">
+                <Spline
+                  scene="https://prod.spline.design/Zzm6PH8x0u7-YPak/scene.splinecode"
+                  className="w-full h-full"
+                  style={{ background: "transparent" }}
+                />
+              </div>
             </section>
           </div>
         </div>
 
         {/* Use case scenarios section */}
-        <section id="product" className="mx-auto max-w-7xl px-8 lg:py-20">
+        <section className="mx-auto max-w-7xl px-8 lg:flex lg:py-20">
           <ImageSwiper />
+        </section>
+
+        <section className="mx-auto max-w-7xl px-8 pt-4 lg:py-20">
+          <div className="text-center text-h4 font-bold text-zinc-700 lg:text-h1">
+            How it works
+          </div>
+          
         </section>
       </main>
     </div>

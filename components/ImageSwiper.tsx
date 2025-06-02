@@ -7,6 +7,34 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
 
+const slides = [
+  {
+    src: "/images/kitchen-rendering.png",
+    alt: "Kitchen Image",
+    title: "Various PillSync Side-by-Side",
+    description:
+      "Your loved ones can easily remind each other to take each prescription timely",
+  },
+  {
+    src: "/images/study-desk-rendering.png",
+    alt: "Study Desk Image",
+    title: "Anywhere from your desk",
+    description: "Friendly reminder to take a prescribed dose on PillSync",
+  },
+  {
+    src: "/images/bedroom-rendering.png",
+    alt: "Bedroom Image",
+    title: "Anywhere from your bedroom",
+    description: "Friendly reminder to take a prescribed dose on PillSync",
+  },
+  {
+    src: "/images/living-room-rendering.png",
+    alt: "Living Room Image",
+    title: "Anywhere from your living room",
+    description: "Friendly reminder to take a prescribed dose on PillSync",
+  },
+];
+
 export default function ImageSwiper() {
   return (
     <Swiper
@@ -17,75 +45,35 @@ export default function ImageSwiper() {
       modules={[Navigation, Pagination, Autoplay]}
       slidesPerView={1}
       spaceBetween={20}
+      observer={true}
+      observeParents={true}
       style={{
         paddingBottom: "3rem",
       }}
       className="[&_.swiper-pagination-bullet]:bg-teal-500"
     >
-      <SwiperSlide>
-        <div className="relative group w-full h-full">
-          {/* Image */}
-          <Image
-            src="/images/elderly-image.png"
-            alt="Elderly Image"
-            width={1456}
-            height={816}
-            className="w-full h-auto object-cover"
-          />
-
-          {/* Overlay on hover */}
-          <div className="absolute inset-0 flex flex-col justify-center items-start px-10 py-5 lg:px-20 lg:py-10 bg-zinc-50 border-8 border-sky-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <div className="text-h5 lg:text-h3 font-bold text-zinc-700 mb-8">
-              For elderly members
-            </div>
-            <div className="text-h5 lg:text-h3 font-regular text-zinc-700">
-              Friendly reminder to take a prescribed dose on PillSync
-            </div>
-          </div>
-        </div>
-      </SwiperSlide>
-
-      <SwiperSlide>
-        <div className="relative group w-full h-full">
-          {/* Image */}
-          <Image
-            src="/images/children-image.png"
-            alt="Children Image"
-            width={1456}
-            height={816}
-          />
-          {/* Overlay on hover */}
-          <div className="absolute inset-0 flex flex-col justify-center items-start px-10 py-5 lg:px-20 lg:py-10 bg-zinc-50 border-8 border-sky-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <div className="text-h5 lg:text-h3 font-bold text-zinc-700 mb-8">
-              For children
-            </div>
-            <div className="text-h5 lg:text-h3 font-regular text-zinc-700">
-              Friendly reminder to take a prescribed dose on PillSync
+      {slides.map((slide, index) => (
+        <SwiperSlide key={index}>
+          <div className="relative group w-full h-[400px] md:h-[600px] border">
+            <Image
+              src={slide.src}
+              alt={slide.alt}
+              fill
+              priority
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
+            />
+            <div className="absolute inset-0 flex flex-col justify-center items-start px-5 py-5 md:px-20 md:py-10 bg-zinc-50 border-8 border-sky-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="text-body-lg md:text-h4 font-bold text-zinc-700 mb-8">
+                {slide.title}
+              </div>
+              <div className="text-body-lg md:text-h4 font-regular text-gray-500">
+                {slide.description}
+              </div>
             </div>
           </div>
-        </div>
-      </SwiperSlide>
-
-      <SwiperSlide>
-        <div className="relative group w-full h-full">
-          {/* Image */}
-          <Image
-            src="/images/parents-image.png"
-            alt="Parents Image"
-            width={1456}
-            height={816}
-          />
-          {/* Overlay on hover */}
-          <div className="absolute inset-0 flex flex-col justify-center items-start px-10 py-5 lg:px-20 lg:py-10 bg-zinc-50 border-8 border-sky-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <div className="text-h5 lg:text-h3 font-bold text-zinc-700 mb-8">
-              For parents
-            </div>
-            <div className="text-h5 lg:text-h3 font-regular text-zinc-700">
-              Friendly reminder to take a prescribed dose on PillSync
-            </div>
-          </div>
-        </div>
-      </SwiperSlide>
+        </SwiperSlide>
+      ))}
     </Swiper>
   );
 }
