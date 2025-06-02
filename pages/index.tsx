@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import CustomLink from "@/components/CustomLink";
 import ImageSwiper from "@/components/ImageSwiper";
+import StepsSection from "@/components/StepSection";
 import Spline from "@splinetool/react-spline";
 
 export default function Home() {
@@ -80,11 +81,19 @@ export default function Home() {
           <ImageSwiper />
         </section>
 
+        {/* How it works section */}
         <section className="mx-auto max-w-7xl px-8 pt-4 lg:py-20">
           <div className="text-center text-h4 font-bold text-zinc-700 lg:text-h1">
             How it works
           </div>
-          
+          <StepsSection />
+        </section>
+
+        {/* Explore our product section */}
+        <section id="product" className="mx-auto max-w-7xl px-8 pt-4 lg:py-20">
+          <div className="text-center text-h4 font-bold text-zinc-700 lg:text-h1">
+            Explore our product
+          </div>
         </section>
       </main>
     </div>
