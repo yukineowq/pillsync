@@ -41,7 +41,7 @@ export default function ImageSwiper() {
       grabCursor
       navigation={false}
       pagination={true}
-      autoplay={true}
+      autoplay={{ delay: 5000 }}
       modules={[Navigation, Pagination, Autoplay]}
       slidesPerView={1}
       spaceBetween={20}

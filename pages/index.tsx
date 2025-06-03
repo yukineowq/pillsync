@@ -3,6 +3,7 @@ import Image from "next/image";
 import CustomLink from "@/components/CustomLink";
 import ImageSwiper from "@/components/ImageSwiper";
 import StepsSection from "@/components/StepSection";
+import FeatureSection from "@/components/FeatureSection";
 import Spline from "@splinetool/react-spline";
 
 export default function Home() {
@@ -91,10 +92,20 @@ export default function Home() {
 
         {/* Explore our product section */}
         <section id="product" className="mx-auto max-w-7xl px-8 pt-4 lg:py-20">
-          <div className="text-center text-h4 font-bold text-zinc-700 lg:text-h1">
+          <h1 className="text-center text-h4 font-bold text-zinc-700 lg:text-h1">
             Explore our product
-          </div>
+          </h1>
+          <FeatureSection />
         </section>
+
+        {/* Video section */}
+        <section className="mx-auto max-w-7xl px-8 py-8 lg:flex lg:py-20">
+          <video width="1200" height="720" controls>
+            <source src="video/test.mp4" type="video/mp4"/>
+          </video>
+        </section>
+
+        
       </main>
     </div>
   );
