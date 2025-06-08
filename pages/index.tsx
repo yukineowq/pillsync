@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import CustomLink from "@/components/CustomLink";
 import ImageSwiper from "@/components/ImageSwiper";
-import StepsSection from "@/components/StepSection";
+import StepSection from "@/components/StepSection";
 import FeatureSection from "@/components/FeatureSection";
 import Spline from "@splinetool/react-spline";
 import { motion } from "framer-motion";
@@ -33,6 +33,7 @@ export default function Home() {
                 alt="Pillsync logo"
                 width={114}
                 height={36}
+                priority
               />
             </div>
             <div className="hidden md:block">
@@ -41,6 +42,7 @@ export default function Home() {
                 alt="Pillsync logo"
                 width={114}
                 height={36}
+                priority
               />
             </div>
             <div className="hidden md:flex md:gap-x-8 md:text-body-sm md:font-semibold">
@@ -114,7 +116,7 @@ export default function Home() {
           <div className="text-center text-h4 font-bold text-zinc-700 lg:text-h1">
             How it works
           </div>
-          <StepsSection />
+          <StepSection />
         </section>
 
         {/* Explore our product section */}
@@ -135,7 +137,7 @@ export default function Home() {
         {/* What's in our box section */}
         <section className="mx-auto max-w-7xl px-8 py-8 lg:py-20">
           <div className="text-center text-h4 font-bold text-zinc-700 lg:text-h1">
-            What's in our box
+            Packing solutions
           </div>
           <div className="flex flex-col gap-y-12 lg:flex-row lg:justify-center lg:items-center lg:gap-x-12 pt-8 lg:pt-16">
             <div>
@@ -145,11 +147,12 @@ export default function Home() {
                   alt="Box packaging"
                   width={600}
                   height={600}
+                  priority
                 />
               </div>
               <div className="text-center mt-8 lg:mt-16">
                 <h3 className="text-h5 font-medium text-zinc-700">
-                  Outer packaging
+                  Pharmacy pack
                 </h3>
               </div>
             </div>
@@ -160,11 +163,12 @@ export default function Home() {
                   alt="Pharmacy pack"
                   width={600}
                   height={600}
+                  priority
                 />
               </div>
               <div className="text-center mt-8 lg:mt-16">
                 <h3 className="text-h5 font-medium text-zinc-700">
-                  Pharmacy pack
+                  Pharmacy bag
                 </h3>
               </div>
             </div>

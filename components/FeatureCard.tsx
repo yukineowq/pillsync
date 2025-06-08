@@ -1,19 +1,19 @@
 import React from "react";
 import Image from "next/image";
 
-interface FeatureCardProps {
+type FeatureCardProps = {
   title: string;
   description: string;
   imageUrl: string;
   imageAlt?: string;
-}
+};
 
-export default function FeatureCard({
+const FeatureCard = ({
   title,
   description,
   imageUrl,
   imageAlt = "Image",
-}: FeatureCardProps) {
+}: FeatureCardProps) => {
   return (
     <div className="lg:flex lg:gap-40 items-center">
       {/* Text Block */}
@@ -31,6 +31,8 @@ export default function FeatureCard({
             src={imageUrl}
             alt={imageAlt}
             fill
+            priority
+            // loading="lazy"  // Uncomment if you want lazy loading instead of eager
             className="object-contain"
             sizes="(max-width: 1024px) 100vw, 50vw"
           />
@@ -38,4 +40,6 @@ export default function FeatureCard({
       </div>
     </div>
   );
-}
+};
+
+export default FeatureCard;

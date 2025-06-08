@@ -11,27 +11,27 @@ const slides = [
   {
     src: "/images/kitchen-rendering.png",
     alt: "Kitchen Image",
-    title: "Various PillSync Side-by-Side",
+    title: "Various PillSyncs, Working Side-by-Side",
     description:
-      "Your loved ones can easily remind each other to take each prescription timely",
+      " Family members can easily stay connected and help remind one another to take medications on time — no matter where they are.",
   },
   {
     src: "/images/study-desk-rendering.png",
     alt: "Study Desk Image",
     title: "Anywhere from your desk",
-    description: "Friendly reminder to take a prescribed dose on PillSync",
+    description: "Stay on schedule while staying productive — PillSync blends perfectly into your workspace.",
   },
   {
     src: "/images/bedroom-rendering.png",
     alt: "Bedroom Image",
     title: "Anywhere from your bedroom",
-    description: "Friendly reminder to take a prescribed dose on PillSync",
+    description: "PillSync sits quietly by your bedside, delivering gentle reminders just when you need them.",
   },
   {
     src: "/images/living-room-rendering.png",
     alt: "Living Room Image",
     title: "Anywhere from your living room",
-    description: "Friendly reminder to take a prescribed dose on PillSync",
+    description: "With a minimal look and smart functionality, PillSync keeps you on track without disrupting your style.",
   },
 ];
 
@@ -40,7 +40,7 @@ export default function ImageSwiper() {
     <Swiper
       grabCursor
       navigation={false}
-      pagination={true}
+      pagination={{ clickable: true }}
       autoplay={{ delay: 5000 }}
       modules={[Navigation, Pagination, Autoplay]}
       slidesPerView={1}
