@@ -14,5 +14,3 @@ PillSync's mission is to improve patient experience with AI pharmaceutical servi
 
 1. Run `npm run dev` to run the local server for development.
 2. Localhost link for Frontend System is `http://localhost:3000`.
-
-<br>
