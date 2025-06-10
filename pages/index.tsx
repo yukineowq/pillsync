@@ -129,9 +129,19 @@ export default function Home() {
 
         {/* Video section */}
         <section className="mx-auto max-w-7xl px-8 py-8 lg:flex lg:py-20">
-          <video width="1200" height="720" controls>
+          {/* <video width="1200" height="720" controls>
             <source src="video/test.mp4" type="video/mp4" />
-          </video>
+          </video> */}
+          <div className="relative group w-full h-[400px] md:h-[600px] border">
+            <Image
+              src="/video/video-cover.jpg"
+              alt="test"
+              fill
+              priority
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
+            />
+          </div>
         </section>
 
         {/* What's in our box section */}
@@ -159,7 +169,7 @@ export default function Home() {
             <div>
               <div className="rounded-md p-4 shadow-lg transition-all duration-300 hover:shadow-2xl">
                 <Image
-                  src="/images/pillsync-packaging.png"
+                  src="/images/pharmacy-bag-packaging.png"
                   alt="Pharmacy pack"
                   width={600}
                   height={600}

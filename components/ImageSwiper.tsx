@@ -33,6 +33,12 @@ const slides = [
     title: "Anywhere from your living room",
     description: "With a minimal look and smart functionality, PillSync keeps you on track without disrupting your style.",
   },
+  {
+    src: "/images/kids-playroom-rendering.png",
+    alt: "Kids Playroom Image",
+    title: "Anywhere from your kids’ playroom",
+    description: "PillSync decorated with playful stickers, helps kids learn about health and responsibility right from their playroom.",
+  },
 ];
 
 export default function ImageSwiper() {
