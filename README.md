@@ -1,3 +1,7 @@
+<p align="center">
+    <img src="https://imgur.com/u318WFQ.png" alt="Connexus Logo" draggable="false" width="25%">
+</p>
+
 <h3 align="center">Manage your Medication Easily and Smartly.</h3>
 
 <p align="center">
@@ -14,3 +18,5 @@ PillSync's mission is to improve patient experience with AI pharmaceutical servi
 
 1. Run `npm run dev` to run the local server for development.
 2. Localhost link for Frontend System is `http://localhost:3000`.
+
+
