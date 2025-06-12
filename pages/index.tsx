@@ -129,19 +129,9 @@ export default function Home() {
 
         {/* Video section */}
         <section className="mx-auto max-w-7xl px-8 py-8 lg:flex lg:py-20">
-          {/* <video width="1200" height="720" controls>
-            <source src="video/test.mp4" type="video/mp4" />
-          </video> */}
-          <div className="relative group w-full h-[400px] md:h-[600px] border">
-            <Image
-              src="/video/video-cover.jpg"
-              alt="test"
-              fill
-              priority
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-            />
-          </div>
+          <video width="1200" height="720" controls>
+            <source src="video/introductory-video.mp4" type="video/mp4" />
+          </video>
         </section>
 
         {/* What's in our box section */}
