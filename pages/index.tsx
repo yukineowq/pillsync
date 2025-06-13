@@ -119,6 +119,13 @@ export default function Home() {
           <StepSection />
         </section>
 
+        {/* Video section */}
+        <section className="mx-auto max-w-7xl px-8 py-8 lg:flex lg:py-20">
+          <video width="1200" height="720" controls>
+            <source src="video/commercial-video.mp4" type="video/mp4" />
+          </video>
+        </section>
+
         {/* Explore our product section */}
         <section id="product" className="mx-auto max-w-7xl px-8 pt-4 lg:py-20">
           <h1 className="text-center text-h4 font-bold text-zinc-700 lg:text-h1">
